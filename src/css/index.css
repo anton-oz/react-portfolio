@@ -1,0 +1,11 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+}
+
+body {
+    margin: 0 auto;
+    margin-top: 10%;
+    text-align: center;
+    background-color: #fffcf5;
+}
