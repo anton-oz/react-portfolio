@@ -28,7 +28,7 @@ export default function AboutMe() {
         console.log(tech[lang])
         logos.push(
             <div className='logo hidden' key={tech[lang][1]}>
-                <img className='svg' src={tech[lang][0]} />
+                <img className='svg' src={tech[lang][0]} alt={tech[lang][1] + " Badge"} />
                 <span className='tooltip'>
                     {tech[lang][1]}
                 </span>

@@ -25,9 +25,6 @@ export default function Homepage() {
         <>
             <AboutMe />
             <Portfolio />
-            <section className='hidden'>
-                footer
-            </section>
         </>
     )
 }
