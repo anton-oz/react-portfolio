@@ -106,6 +106,7 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 [css scroll animations](https://www.youtube.com/watch?v=T33NN_pPeNI)
 [background particles](https://particles.js.org/)
 [starry background](https://codepen.io/agoodwin/pen/NMJoER)
+[form error message logic](https://chatgpt.com/)
 
 ## License
 

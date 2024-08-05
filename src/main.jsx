@@ -9,6 +9,8 @@ import './css/background.css'
 
 import App from './App.jsx'
 import Homepage from './pages/Homepage.jsx';
+import PortfolioPage from './pages/PortfolioPage.jsx';
+import ContactPage from './pages/ContactPage.jsx'
 
 const router = createBrowserRouter([
   {
@@ -19,6 +21,14 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Homepage />
+      },
+      {
+        path: '/portfolio',
+        element: <PortfolioPage />
+      },
+      {
+        path: '/contact',
+        element: <ContactPage />
       }
     ]
   }

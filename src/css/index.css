@@ -8,10 +8,12 @@ body {
     padding: 0;
     text-align: center;
     overflow: hidden;
+
 }
 
 #root {
     scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
     overflow: scroll;
     height: 100vh;
 }

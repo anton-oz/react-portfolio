@@ -1,28 +1,56 @@
-
-
 export default function Portfolio() {
+    
+    const projects = [
+        {
+            name: 'Weather Dashboard', 
+            url: 'https://anton-oz.github.io/Weather-Dashboard/', 
+            repo: 'https://github.com/anton-oz/Weather-Dashboard',
+            img: 'url(/project-imgs/weather.png)'
+        },
+        {
+            name: 'Kanban Taskboard',
+            url: 'https://anton-oz.github.io/KanBan-TaskBoard/',
+            repo: 'https://github.com/anton-oz/KanBan-TaskBoard',
+            img: 'url(/project-imgs/kanbanboard.png'
+        },
+        {
+            name: 'More projects coming soon...',
+            url: 'none',
+            img: '/ufo1.svg'
+        },
+        {
+            name: 'More projects coming soon...',
+            url: 'none',
+            img: '/ufo1.svg'
+        },
+        {
+            name: 'More projects coming soon...',
+            url: 'none',
+            img: '/ufo1.svg'
+        },
+        {
+            name: 'More projects coming soon...',
+            url: 'none',
+            img: '/ufo1.svg'
+        }
+    ];
 
-    const sample = [];
-    let i = 1;
-    while (sample.length < 9) {
-        sample.push(`${i}`);
-        i++;
-    };
-
-    const cards = sample.map((i) => (
-        <div className="project-card" key={i}>
-            <h4>Project Placeholder {i}</h4>
+    const projCards = projects.map((project, i) => (
+        <div className="project-card hidden" style={{backgroundImage: project.img}} key={i}>
+            <a href={project.url} target='_blank'>
+                <h4>{project.name}</h4>
+            </a>
+            <a href={project.repo} target="_blank">
+                <img className="github-logo" src="github-mark.svg" alt="github logo" />
+            </a>
         </div>
     ))
 
     return (
-        <section className='hidden'>
+        <section id='portfolio' className='hidden'>
             <div className="portfolio">
-                <h2>
-                    My Projects
-                </h2>
                 <div className="portfolio-container">    
-                    {cards}
+                    {projCards}
                 </div>
             </div>
         </section>
