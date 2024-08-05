@@ -14,6 +14,9 @@ export default function Nav() {
             <Link key={3} to='/contact'>
                 Contact Form
             </Link>
+            <Link key={4} to='/resume'>
+                Resume
+            </Link>
         </nav>
     )
 }

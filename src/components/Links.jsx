@@ -4,9 +4,9 @@ export default function Links() {
             <h3>
                 My links:
             </h3>
-            <a href='https://github.com/anton-oz' target="_blank">Github</a>
-            <a href='#' >Resume</a>
-            <a href='mailto:antonosland789@gmail.com'>Email me</a>
+            <a className="link-a" href='https://github.com/anton-oz' target="_blank">Github</a>
+            <a className="link-a" href='https://www.linkedin.com/in/anton-osland0/' target="_blank" >LinkedIn</a>
+            <a className="link-a" href='mailto:antonosland789@gmail.com'>Email me</a>
         </div>
     )
 }
