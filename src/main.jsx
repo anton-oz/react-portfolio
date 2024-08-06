@@ -12,12 +12,14 @@ import Homepage from './pages/Homepage.jsx';
 import PortfolioPage from './pages/PortfolioPage.jsx';
 import ContactPage from './pages/ContactPage.jsx';
 import ResumePage from './pages/ResumePage.jsx'
+import Error from './pages/NotFound.jsx';
+
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    // errorElement: ,
+    errorElement: <Error />,
     children: [
       {
         index: true,
@@ -34,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: '/resume',
         element: <ResumePage />
+      },
+      {
+        path: '*',
+        element: <Error />
       }
     ]
   }

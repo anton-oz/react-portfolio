@@ -1,22 +1,55 @@
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 export default function Nav() {
 
+    const links = [
+        {
+            name: 'About Me',
+            route: '/'
+        },
+        {
+            name: 'Portfolio',
+            route: '/portfolio',
+        },
+        {
+            name: 'Contact Form',
+            route: '/contact',
+        },
+        {
+            name: 'Resume',
+            route: '/resume'
+        }
+    ]
 
     return (
         <nav>
-            <Link key={1} to='/'>
+            {links.map((item, i) => (
+                <NavLink 
+                    key={i} 
+                    to={item.route}
+                    className={({isActive}) => {
+                        if (isActive) {
+                            return 'active'
+                        }
+                    }}
+                >
+                    {item.name}
+                </NavLink>
+            ))}
+            {/* <NavLink className={function({isActive}) {
+                
+            }} key={1} to='/'>
                 About Me
-            </Link>
-            <Link key={2} to='/portfolio'>
+            </NavLink>
+            <NavLink key={2} to='/portfolio'>
                 Portfolio
-            </Link>
-            <Link key={3} to='/contact'>
+            </NavLink>
+            <NavLink key={3} to='/contact'>
                 Contact Form
-            </Link>
-            <Link key={4} to='/resume'>
+            </NavLink>
+            <NavLink key={4} to='/resume'>
                 Resume
-            </Link>
+            </NavLink> */}
         </nav>
     )
 }

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { validateEmail } from "../utils/functions";
 
 export default function Form() {
-    const [name, setName] = useState('');
+    const [formName, setFormName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     
@@ -11,7 +11,7 @@ export default function Form() {
     const [messageTouched, setMessageTouched] = useState(false);
 
     const [errors, setErrors] = useState({
-        name: '',
+        formName: '',
         email: '',
         message: ''
     });
@@ -22,9 +22,9 @@ export default function Form() {
         
         
         switch (name) {
-            case 'name':
-                setName(value);
-                setErrors(prev => ({ ...prev, name: '' }))
+            case 'formName':
+                setFormName(value);
+                setErrors(prev => ({ ...prev, formName: '' }))
                 break;
             case 'email':
                 setEmail(value);
@@ -44,9 +44,9 @@ export default function Form() {
         let error = '';
     
         switch (name) {
-            case 'name':
-                if (!name) error = 'Name is required';
-                setErrors(prev => ({ ...prev, name: error }));
+            case 'formName':
+                if (!formName) error = 'Name is required';
+                setErrors(prev => ({ ...prev, formName: error }));
                 setNameTouched(true);
                 break;
             case 'email':
@@ -74,19 +74,20 @@ export default function Form() {
         setEmailTouched(true);
         setMessageTouched(true);
         
-        if (!name || !email || !message || errors.email) {
+        if (!formName || !email || !message || errors.email) {
             alert('Please fill out all fields correctly.');
             return;
         }
         
-        alert(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+        // alert(`Name: ${formName}\nEmail: ${email}\nMessage: ${message}`);
+        alert(`Thanks for submitting a form, ${formName}!`)
 
         // Clear form
-        setName('');
+        setFormName('');
         setEmail('');
         setMessage('');
         setErrors({
-            name: '',
+            formName: '',
             email: '',
             message: ''
         });
@@ -103,14 +104,16 @@ export default function Form() {
                     <div>
                         <input
                             className="reset-style"
-                            name="name"
-                            value={name}
+                            name="formName"
+                            value={formName}
                             onChange={handleInputChange}
                             onBlur={handleBlur}
                             type="text"
                             placeholder="Your Name"
                         />
-                        {nameTouched && errors.name && <p className="error">{errors.name}</p>}
+                        <p className={nameTouched && errors.formName ? 'hideError error': 'hideError'}>
+                            {nameTouched && errors.formName}
+                        </p>
                     </div>
                     <div>
                         <input
@@ -122,7 +125,9 @@ export default function Form() {
                             type="email"
                             placeholder="Your Email"
                         />
-                        {emailTouched && errors.email && <p className="error">{errors.email}</p>}
+                        <p className={emailTouched && errors.email ? 'hideError error': 'hideError'}>
+                            {emailTouched && errors.email}
+                        </p>
                     </div>
                     <div>
                         <textarea 
@@ -133,7 +138,9 @@ export default function Form() {
                             onBlur={handleBlur}
                             placeholder="Enter your message..."
                         />
-                        {messageTouched && errors.message && <p className="error">{errors.message}</p>}
+                        <p className={messageTouched && errors.message ? 'hideError error': 'hideError'}>
+                            {messageTouched && errors.message}
+                        </p>
                     </div>
                     <button type="submit">
                         Submit

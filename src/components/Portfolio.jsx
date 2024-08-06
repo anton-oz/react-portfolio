@@ -41,7 +41,7 @@ export default function Portfolio() {
                 <h4>{project.name}</h4>
             </a>
             <a href={project.repo} target="_blank">
-                <img className="github-logo" src="github-mark.svg" alt="github logo" />
+                <img className="github-logo" src="/github-mark.svg" alt="github logo" />
             </a>
         </div>
     ))

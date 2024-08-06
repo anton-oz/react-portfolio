@@ -1,7 +1,4 @@
-
-
 export default function AboutMe() {
-    
                    
     return (
         <section className='hidden' id='aboutMe'>
@@ -10,7 +7,9 @@ export default function AboutMe() {
                     Hi there! My name is Anton Osland and I am a full-stack developer. Click on my portfolio or resume links up top to
                     find out about my technical capabilities.
                 </p>
-                
+
+                <img src="/me.jpg" className='personal-photo' alt="Photo of Anton" />
+                                
                 <p>
                     I recently recieved a certificate in Web Development from an EdX Bootcamp hosted at the University
                     of Minnesota. My hobbies include playing piano, organizing playlists, cooking, and exercising.
