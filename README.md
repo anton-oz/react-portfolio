@@ -9,7 +9,7 @@ I built this site to have an updated portfolio, and to show off my skills with r
 No need to install anything unless you would like to run the site locally, in that case clone the repo and do a simple `npm i` to download neccesary packages.
 
 ## Usage
-[live site]()
+[live site](https://antonreact.netlify.app/)
 ![screenshot of site](./screenshot/localhost_3000_.png)
 
 To use the site simply go to the live site link and navigate the page!
